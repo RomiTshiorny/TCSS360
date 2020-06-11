@@ -17,11 +17,11 @@ import java.util.ArrayList;
 public class AccountManager {
 	
 	
+	public final static File SAVE_DIR = new File("HomeOwnerFiles");
 	/**
 	 * Location for list of currently existing users
 	 */
-	public final static File SAVE_FILE = new File(System.getProperty("user.dir") 
-			+ System.getProperty("file.separator") + "client files" + System.getProperty("file.separator") + "users.ser");
+	public final static File SAVE_FILE = new File("HomeOwnerFiles" + System.getProperty("file.separator")+"users.ser");
 	/**
 	 * List containing all available Users/accounts for the program
 	 */
@@ -72,6 +72,11 @@ public class AccountManager {
 	@SuppressWarnings("unchecked")
 	private void deserialize() {
 		try {
+			if(!SAVE_FILE.exists()) {
+				SAVE_DIR.mkdir();
+				SAVE_FILE.createNewFile();
+				serialize();
+			}
 			FileInputStream inFile = new FileInputStream(SAVE_FILE);
 			ObjectInputStream reader = new ObjectInputStream(inFile);
 			myUserList = (ArrayList<User>) reader.readObject();

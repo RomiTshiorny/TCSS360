@@ -22,11 +22,10 @@ import java.util.HashSet;
 public class Room implements Serializable{
 
 	
-	/**
-	 * Location for list of currently existing users
-	 */
-	public final static File SAVE_FILE = new File(System.getProperty("user.dir") 
-			+ System.getProperty("file.separator") + "client files" + System.getProperty("file.separator") + "House.ser");
+		/**
+	 	* Location for list of currently existing users
+	 	*/
+		public final static File SAVE_FILE = new File("HomeOwnerFiles" + System.getProperty("file.separator")+"House.ser");
 		/**
 		* Auto Generated ID.
 	 	*/

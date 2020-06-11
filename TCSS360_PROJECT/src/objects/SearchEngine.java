@@ -2,7 +2,6 @@ package objects;
 
 import java.util.HashSet;
 import java.io.Serializable;
-import java.util.ArrayList;
 
 /**
  * A class to perform simple searches of Room objects, including their subrooms, for relevant File objects.  

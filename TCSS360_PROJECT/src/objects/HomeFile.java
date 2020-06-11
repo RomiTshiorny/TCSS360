@@ -4,11 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
 import java.awt.Desktop;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
 
 /**
  * Class (File object) to create a new file. Each file
